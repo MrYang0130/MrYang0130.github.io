@@ -149,6 +149,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/17/bianma/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mr·Yang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔷薇园的猫">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/17/bianma/" class="post-title-link" itemprop="url">编码</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-17 10:58:35 / 修改时间：11:03:45" itemprop="dateCreated datePublished" datetime="2020-04-17T10:58:35+08:00">2020-04-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">-学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文从原码讲起。通过简述原码，反码和补码存在的作用，加深对补码的认识。力争让你对补码的概念不再局限于：负数的补码等于反码加一。</p>
+<p>接触过计算机或电子信息相关课程的同学，应该都或多或少看过补码这哥仨。每次都是在课本的最前几页，来上这么一段：什么反码是原码除符号位，按位取反。补码等于反码加一。然后给整得莫名其妙，稀里糊涂地，接着就是翻页，反正后面的内容也跟三码没多大关系。</p>
+<p>我原来也是看了好几遍都没看懂。古人云：事不过三。学C语言的时候，看过一次。不懂？看《计算机基本组成原理》的时候看过，还是不懂！到了大三，上《单片微机原理与接口技术》的时候仍旧是不懂。到了期末，复习的时候，和宿舍的人瞎聊。说讲讲这些码呀，我说我也不是很清楚呀。然后就一边说怎么求码，一边算。玩着玩着，突然就明白了。我说好，打住。不说了，放假我在好好整理下思路，于是就有了这篇额。。算讨论帖吧。</p>
+<p>好了，废话不多说。开始我们的原码，反码，补码之旅。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/17/bianma/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/2020-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -180,7 +258,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-27 11:37:04" itemprop="dateModified" datetime="2020-02-27T11:37:04+08:00">2020-02-27</time>
+                <time title="修改时间：2020-04-17 11:03:47" itemprop="dateModified" datetime="2020-04-17T11:03:47+08:00">2020-04-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -205,95 +283,14 @@
       
           <p>&emsp;&emsp;博客终于搭好了，却不会Markdown，留个笔记防止学了忘，忘了学。 XDDD  </p>
 <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题 H1</span><br><span class="line">## 这是二级标题 H2</span><br><span class="line">### 这是三级标题 H3</span><br><span class="line">#### 这是四级标题 H4</span><br><span class="line">##### 这是五级标题 H5</span><br><span class="line">###### 这是六级标题 H6</span><br></pre></td></tr></table></figure>
-
-<h2 id="换行方法："><a href="#换行方法：" class="headerlink" title="换行方法：  "></a>换行方法：  </h2><p>1.连续两个以上空格+回车<br>2.使用html语言换行标签: <code>&lt;br&gt;</code></p>
-<h2 id="首行缩进两个字符：-每个表示一个空格，连续使用两个即可"><a href="#首行缩进两个字符：-每个表示一个空格，连续使用两个即可" class="headerlink" title="首行缩进两个字符：(每个表示一个空格，连续使用两个即可)  "></a>首行缩进两个字符：(每个表示一个空格，连续使用两个即可)  </h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.&amp;ensp; 半角的空格  </span><br><span class="line">2.&amp;emsp; 全角的空格</span><br></pre></td></tr></table></figure>
-
-<h2 id="强调"><a href="#强调" class="headerlink" title="强调  "></a>强调  </h2><p>这会是 <em>斜体</em> 的文字<br>这会是 <em>斜体</em> 的文字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*斜体*  </span><br><span class="line">_斜体_</span><br></pre></td></tr></table></figure>
-
-<p>这会是 <strong>粗体</strong> 的文字<br>这会是 <strong>粗体</strong> 的文字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**粗体**  </span><br><span class="line">__粗体__ （两个下划线）</span><br></pre></td></tr></table></figure>
-
-<p><em>可以斜体 <strong>粗体组合</strong> 这些符号</em>   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_可以斜体**粗体组合**这些符号_</span><br></pre></td></tr></table></figure>
-
-<p><del>这个文字将会被横线删除</del></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~这个文字将会被横线删除~~</span><br></pre></td></tr></table></figure>
-
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表  "></a>列表  </h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
-<li>Item 1  </li>
-<li>Item 2  <ul>
-<li>Item 2a  </li>
-<li>Item 2b  <ul>
-<li>Item 2ba  </li>
-<li>Item 2bb  </li>
-</ul>
-</li>
-<li>Item 2c</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- Item 1  </span><br><span class="line">- Item 2  </span><br><span class="line">    - Item 2a  </span><br><span class="line">    - Item 2b  </span><br><span class="line">        - Item 2ba  </span><br><span class="line">        - Item 2bb  </span><br><span class="line">    - Item 2c</span><br></pre></td></tr></table></figure>
-
-<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol>
-<li>Item 1  </li>
-<li>Item 2  </li>
-<li>Item 3  <ol>
-<li>Item 3a  </li>
-</ol>
-</li>
-<li>Item 3b </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. Item 1  </span><br><span class="line">1. Item 2  </span><br><span class="line">1. Item 3  </span><br><span class="line">    1. Item 3a  </span><br><span class="line">1. Item 3b</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h2><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582023467855&di=7c2a7c1d4bf75935eab3b13e50f70dd4&imgtype=0&src=http%3A%2F%2Fimg.9ku.com%2Fgeshoutuji%2Fsingertuji%2F1%2F10098%2F10098_7.jpg" alt="头像"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![随意文字](图片链接 &quot;鼠标置于图片上可显示标题文字，可以不写&quot;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>这是<a href="https://mryang0130.github.io/" target="_blank" rel="noopener" title="Mr·Yang">我的博客</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接文字]（链接地址 &quot;鼠标至于上时显示的title&quot;）</span><br></pre></td></tr></table></figure>
-
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>正如某某所说：</p>
-<blockquote>
-<p>世上本无事，庸人自扰之。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">正如某某所说：</span><br><span class="line"></span><br><span class="line">&gt;世上本无事，庸人自扰之。</span><br></pre></td></tr></table></figure>
-
-<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>在文章里 <code>&lt;addr&gt;</code> 就这样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在文章里&#96;&lt;addr&gt;&#96; 就这样</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>在你的代码上面和下面添加 ``` 来表示代码块。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">require &#39;redcarpet&#39;</span><br><span class="line">markdown &#x3D; Redcarpet.new(&quot;Hello World!&quot;)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure>
-
-<h2 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h2><p>你可以给你的代码块添加任何一种语言的语法高亮<br>例如，给 ruby 代码添加语法高亮：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'redcarpet'</span></span><br><span class="line">markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure>
-
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
-<thead>
-<tr>
-<th align="right">表头一</th>
-<th align="left">表头二</th>
-<th align="center">表头三</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="right">右对齐</td>
-<td align="left">左对齐</td>
-<td align="center">居中</td>
-</tr>
-<tr>
-<td align="right">内容11111111111111</td>
-<td align="left">内容22222222222222</td>
-<td align="center">内容3333333333333333333</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头一|表头二|表头三</span><br><span class="line">--------: | :-------|:---------:</span><br><span class="line">右对齐 | 左对齐|居中</span><br><span class="line">内容11111111111111|内容22222222222222|内容3333333333333333333</span><br></pre></td></tr></table></figure>
-
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>如下:(三个或者更多的)</p>
-<p>— 连字符<br>**** 星号<br>___ 下划线  </p>
-<hr>
-<p>未完待续。。。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/02/12/2020-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -378,12 +375,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
       </div>
   </nav>

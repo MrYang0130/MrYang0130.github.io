@@ -20,27 +20,31 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="蔷薇园的猫">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="super是指向父类的引用，如果构造方法没有显示地调用父类的构造方法，那么编译器会自动为它加上一个默认的super()方法调用。如果父类由没有默认的无参构造方法，编译器就会报错，super()语句必须是构造方法的第一个子句。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习——super关键字">
+<meta property="og:url" content="http://yoursite.com/2020/06/23/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94super%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
 <meta property="og:site_name" content="蔷薇园的猫">
+<meta property="og:description" content="super是指向父类的引用，如果构造方法没有显示地调用父类的构造方法，那么编译器会自动为它加上一个默认的super()方法调用。如果父类由没有默认的无参构造方法，编译器就会报错，super()语句必须是构造方法的第一个子句。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-23T03:55:35.000Z">
+<meta property="article:modified_time" content="2020-06-28T03:11:31.799Z">
 <meta property="article:author" content="Mr·Yang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/06/23/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94super%E5%85%B3%E9%94%AE%E5%AD%97/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>蔷薇园的猫</title>
+  <title>Java学习——super关键字 | 蔷薇园的猫</title>
   
 
 
@@ -147,94 +151,10 @@
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/27/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mr·Yang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蔷薇园的猫">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/27/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/" class="post-title-link" itemprop="url">Java学习——方法重写</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-27 12:04:35" itemprop="dateCreated datePublished" datetime="2020-06-27T12:04:35+08:00">2020-06-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-28 11:11:37" itemprop="dateModified" datetime="2020-06-28T11:11:37+08:00">2020-06-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">-学习</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <p>方法重写：</p>
-<blockquote>
-<p>指在子类中重新定义父类中已有的方法。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/27/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
   
   
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/23/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94super%E5%85%B3%E9%94%AE%E5%AD%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -248,8 +168,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/23/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94super%E5%85%B3%E9%94%AE%E5%AD%97/" class="post-title-link" itemprop="url">Java学习——super关键字</a>
+          Java学习——super关键字
         </h1>
 
         <div class="post-meta">
@@ -289,195 +208,57 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <blockquote>
+        <blockquote>
 <p>super是指向父类的引用，如果构造方法没有显示地调用父类的构造方法，那么编译器会自动为它加上一个默认的super()方法调用。如果父类由没有默认的无参构造方法，编译器就会报错，super()语句必须是构造方法的第一个子句。</p>
 </blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/23/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94super%E5%85%B3%E9%94%AE%E5%AD%97/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+<a id="more"></a>
+<p>super关键字的学习中遇到了很多问题，上面的引用是我浏览了多篇博客找到的关于super最简洁明了的定义，但别人的学习经验终究不如自己的来的记忆深刻，所以写下这篇笔记来记录学习super的小细节。</p>
+<h5 id="1-每个子类构造方法的第一条语句，都是隐含的调用super-，如果父类没有无参构造方法，那么在编译的时候就会报错。"><a href="#1-每个子类构造方法的第一条语句，都是隐含的调用super-，如果父类没有无参构造方法，那么在编译的时候就会报错。" class="headerlink" title="1.每个子类构造方法的第一条语句，都是隐含的调用super()，如果父类没有无参构造方法，那么在编译的时候就会报错。"></a>1.每个子类构造方法的第一条语句，都是隐含的调用super()，如果父类没有无参构造方法，那么在编译的时候就会报错。</h5><p>举个例子：</p>
+<p>class A<br>{<br>    public int i;<br>    public A()<br>    {<br>        i = 20;<br>    }<br>}</p>
+<p>class B extends A<br>{<br>    public int j;<br>    public B(int i, int j)<br>    {<br>        this.j = j;<br>    }<br>}</p>
+<p>public class TestSuper_2<br>{<br>    public static void main(String[] args)<br>    {<br>        B bb = new B(10, 20);<br>        System.out.printf(“i = %d, j = %d”, bb.i, bb.j);<br>    }<br>}</p>
+<p>结果:</p>
+<p>i = 20, j = 20<br>Process finished with exit code 0</p>
+<p>很清晰的可以看到，类B在创建对象的时候，调用了两个参数的构造方法，但只把j的值赋给bb对象的属性，在B的构造方法中没有写super()语句，但仍然使i的值变为20，说明调用了A的构造方法，即隐含的调用了super()。</p>
+<h5 id="2-如果显示的写出super-语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。"><a href="#2-如果显示的写出super-语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。" class="headerlink" title="2.如果显示的写出super()语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。"></a>2.如果显示的写出super()语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。</h5><p>（通俗易懂，不过多解释）</p>
+<h5 id="3-super-，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。"><a href="#3-super-，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。" class="headerlink" title="3.super()，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。"></a>3.super()，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。</h5><p>例如：</p>
+<p>class A<br>{<br>    public int i;<br>    public A(int i)<br>    {<br>        System.out.printf(“无参构造方法被调用了。\n”);<br>    }<br>}</p>
+<p>class B extends A<br>{<br>    public int j;<br>    public B(int i, int j)<br>    {<br>        this.j = j;<br>    }<br>}</p>
+<p>public class TestSuper<br>{<br>    public static void main(String[] args)<br>    {</p>
+<pre><code>}</code></pre><p>}</p>
+<p>此时编译器会标红类B的中构造方法，并提示There is no default constructor available in ‘A’，即类A中没有可供B调用的构造方法。</p>
+<h5 id="4-既可以写super-，前提是父类中有无参构造方法；也可以写super-实参-，前提是父类中有对应实参个数的有参构造方法。"><a href="#4-既可以写super-，前提是父类中有无参构造方法；也可以写super-实参-，前提是父类中有对应实参个数的有参构造方法。" class="headerlink" title="4.既可以写super()，前提是父类中有无参构造方法；也可以写super(实参)，前提是父类中有对应实参个数的有参构造方法。"></a>4.既可以写super()，前提是父类中有无参构造方法；也可以写super(实参)，前提是父类中有对应实参个数的有参构造方法。</h5><p>（依旧通俗易懂）</p>
+<h5 id="5-调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类-super，与C-不同）"><a href="#5-调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类-super，与C-不同）" class="headerlink" title="5.调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类.super，与C++不同）"></a>5.调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类.super，与C++不同）</h5>
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/17/%E7%BC%96%E7%A0%81/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mr·Yang">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蔷薇园的猫">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/17/%E7%BC%96%E7%A0%81/" class="post-title-link" itemprop="url">编码</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-17 10:58:35 / 修改时间：11:03:46" itemprop="dateCreated datePublished" datetime="2020-04-17T10:58:35+08:00">2020-04-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">-学习</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本文从原码讲起。通过简述原码，反码和补码存在的作用，加深对补码的认识。力争让你对补码的概念不再局限于：负数的补码等于反码加一。</p>
-<p>接触过计算机或电子信息相关课程的同学，应该都或多或少看过补码这哥仨。每次都是在课本的最前几页，来上这么一段：什么反码是原码除符号位，按位取反。补码等于反码加一。然后给整得莫名其妙，稀里糊涂地，接着就是翻页，反正后面的内容也跟三码没多大关系。</p>
-<p>我原来也是看了好几遍都没看懂。古人云：事不过三。学C语言的时候，看过一次。不懂？看《计算机基本组成原理》的时候看过，还是不懂！到了大三，上《单片微机原理与接口技术》的时候仍旧是不懂。到了期末，复习的时候，和宿舍的人瞎聊。说讲讲这些码呀，我说我也不是很清楚呀。然后就一边说怎么求码，一边算。玩着玩着，突然就明白了。我说好，打住。不说了，放假我在好好整理下思路，于是就有了这篇额。。算讨论帖吧。</p>
-<p>好了，废话不多说。开始我们的原码，反码，补码之旅。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/17/%E7%BC%96%E7%A0%81/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/17/%E7%BC%96%E7%A0%81/" rel="prev" title="编码">
+      <i class="fa fa-chevron-left"></i> 编码
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/27/Java%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/" rel="next" title="Java学习——方法重写">
+      Java学习——方法重写 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/2020-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mr·Yang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蔷薇园的猫">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/12/2020-1/" class="post-title-link" itemprop="url">Markdown 语法介绍</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-12 16:43:26" itemprop="dateCreated datePublished" datetime="2020-02-12T16:43:26+08:00">2020-02-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-17 11:03:47" itemprop="dateModified" datetime="2020-04-17T11:03:47+08:00">2020-04-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">-随笔</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;博客终于搭好了，却不会Markdown，留个笔记防止学了忘，忘了学。 XDDD  </p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题 H1</span><br><span class="line">## 这是二级标题 H2</span><br><span class="line">### 这是三级标题 H3</span><br><span class="line">#### 这是四级标题 H4</span><br><span class="line">##### 这是五级标题 H5</span><br><span class="line">###### 这是六级标题 H6</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/12/2020-1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -528,6 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-每个子类构造方法的第一条语句，都是隐含的调用super-，如果父类没有无参构造方法，那么在编译的时候就会报错。"><span class="nav-number">1.</span> <span class="nav-text">1.每个子类构造方法的第一条语句，都是隐含的调用super()，如果父类没有无参构造方法，那么在编译的时候就会报错。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-如果显示的写出super-语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。"><span class="nav-number">2.</span> <span class="nav-text">2.如果显示的写出super()语句，则必须保证该语句是构造方法中的第一条语句，否则编译会报错。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-super-，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。"><span class="nav-number">3.</span> <span class="nav-text">3.super()，如果不写，则编译器会自动添加，如果此时父类没有无参构造方法，那么编译会报错。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-既可以写super-，前提是父类中有无参构造方法；也可以写super-实参-，前提是父类中有对应实参个数的有参构造方法。"><span class="nav-number">4.</span> <span class="nav-text">4.既可以写super()，前提是父类中有无参构造方法；也可以写super(实参)，前提是父类中有对应实参个数的有参构造方法。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类-super，与C-不同）"><span class="nav-number">5.</span> <span class="nav-text">5.调用父类构造方法的语句必须借助于super，不能直接写父类的类名（即不能写父类.super，与C++不同）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
  

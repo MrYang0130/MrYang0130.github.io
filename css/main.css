@@ -1265,7 +1265,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff205e;
+  background: #a79395;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2651,7 +2651,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://i.loli.net/2020/06/30/9fIb6xlDt7NMP1F.jpg");
+  background: url("/images/background_1.JPG");
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
@@ -2659,7 +2659,4 @@ body {
   -o-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-}
-.main-inner {
-  opacity: 1;
 }

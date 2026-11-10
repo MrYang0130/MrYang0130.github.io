@@ -1,0 +1,21 @@
+# 操作系统与编辑器生成的本地文件
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 日志与临时文件
+*.log
+*.tmp
+*.bak
+
+# 依赖与构建产物（本项目为纯静态页面，通常不会生成）
+node_modules/
+dist/
+build/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example

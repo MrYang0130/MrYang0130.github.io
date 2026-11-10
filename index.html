@@ -1,489 +1,200 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="林予安的个人主页：前端工程师与体验设计实践者，关注设计系统、无障碍与数据可视化。">
-  <meta name="theme-color" content="#f5f2e9">
-  <title>林予安 · 前端工程师与体验设计</title>
+  <meta name="description" content="林予安的个人主页：个人信息、教育背景、工作经历与专业技能。">
+  <meta name="theme-color" content="#fbfaf7">
+  <title>林予安 · 个人主页</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    // 在首次绘制前恢复主题，避免深色模式闪白。
-    (function () {
-      var root = document.documentElement;
-      try {
-        var saved = localStorage.getItem("homepage-theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        root.dataset.theme = saved === "light" || saved === "dark" ? saved : (prefersDark ? "dark" : "light");
-      } catch (error) {
-        root.dataset.theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-      }
-    })();
-  </script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <header class="site-header" data-header>
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="林予安，返回页面顶部">
-        <span class="brand__mark" aria-hidden="true">予</span>
-        <span class="brand__text">
-          林予安
-          <span class="brand__role">Frontend &amp; Experience</span>
-        </span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#profile" aria-label="林予安，返回个人信息">
+        <span class="brand-name">林予安</span>
+        <span class="brand-note">个人主页</span>
       </a>
 
       <nav class="site-nav" aria-label="主导航">
         <ul class="nav-list">
-          <li><a href="#top" data-nav aria-current="location">首页</a></li>
-          <li><a href="#about" data-nav>关于</a></li>
-          <li><a href="#skills" data-nav>技能</a></li>
-          <li><a href="#projects" data-nav>项目</a></li>
-          <li><a href="#contact" data-nav>联系</a></li>
+          <li><a href="#profile" data-nav aria-current="location">个人信息</a></li>
+          <li><a href="#education" data-nav>教育背景</a></li>
+          <li><a href="#experience" data-nav>工作经历</a></li>
+          <li><a href="#skills" data-nav>专业技能</a></li>
         </ul>
       </nav>
-
-      <div class="header__actions">
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到深色模式" title="切换配色主题">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
-          </svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-          </svg>
-        </button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="hero__availability">
-            <span class="status-dot" aria-hidden="true"></span>
-            目前可承接新项目
-          </p>
+    <section class="section section--profile" id="profile" aria-label="个人信息">
+      <div class="container section-grid">
+        <header class="section-heading">
+          <p class="section-index">01</p>
+          <h2>个人信息</h2>
+        </header>
 
-          <h1 id="hero-title">
-            你好，我是<br>
-            <span class="hero__name">林予安<span class="hero__dot">.</span></span>
-          </h1>
-
-          <p class="hero__lead">
-            我在上海做前端，也在意产品体验。擅长把复杂的想法，
-            梳理成清晰、顺手、人人都能用的界面。
-          </p>
-
-          <div class="hero__actions">
-            <a class="button button--primary" href="#projects">
-              看看我的项目
-              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 10h12M11 5l5 5-5 5"></path>
-              </svg>
-            </a>
-            <a class="button button--ghost" href="#contact">聊聊合作</a>
+        <div class="section-content">
+          <div class="profile-intro">
+            <p class="profile-kicker">前端工程师 · 体验设计</p>
+            <h1>林予安</h1>
+            <p class="profile-summary">
+              我是一名前端工程师，关注设计系统、无障碍与性能。
+              习惯从真实使用场景出发，把复杂的信息整理成清晰、稳定、易维护的界面。
+            </p>
           </div>
 
-          <ul class="hero__meta" aria-label="个人概况">
-            <li>上海 · UTC+8</li>
-            <li>6 年产品研发经验</li>
-            <li>无障碍优先</li>
-          </ul>
-        </div>
-
-        <div class="hero__visual" aria-hidden="true">
-          <span class="hero__grid"></span>
-
-          <div class="portrait">
-            <div class="portrait__chrome">
-              <span>PORTFOLIO / 01</span>
-              <span class="portrait__badge">OPEN TO WORK</span>
+          <dl class="profile-details">
+            <div class="detail">
+              <dt>所在城市</dt>
+              <dd>上海，中国</dd>
             </div>
-
-            <div class="portrait__face">
-              <span class="portrait__meta">SHANGHAI, CN</span>
-              <span class="portrait__initial">Y</span>
-              <span class="portrait__cn">予安</span>
+            <div class="detail">
+              <dt>当前职位</dt>
+              <dd>高级前端工程师</dd>
             </div>
-
-            <p class="portrait__quote">“设计不是装饰，<br>而是让人少想一步。”</p>
-
-            <ul class="portrait__tags">
-              <li>前端工程</li>
-              <li>设计系统</li>
-              <li>无障碍</li>
-            </ul>
-
-            <div class="portrait__footer">
-              <span>LIN YU'AN © 2026</span>
-              <span class="portrait__arrow">↗</span>
+            <div class="detail">
+              <dt>工作年限</dt>
+              <dd>6 年</dd>
             </div>
-          </div>
-
-          <span class="floating-chip floating-chip--a">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m7 5-5 5 5 5M13 5l5 5-5 5"></path>
-            </svg>
-            Clean code
-          </span>
-          <span class="floating-chip floating-chip--b">
-            <span class="chip-dot"></span>
-            WCAG AA
-          </span>
+            <div class="detail">
+              <dt>电子邮箱</dt>
+              <dd><a class="text-link" href="mailto:hello@yian.dev">hello@yian.dev</a></dd>
+            </div>
+            <div class="detail">
+              <dt>个人主页</dt>
+              <dd>
+                <a class="text-link" href="https://github.com/" rel="noopener">GitHub</a>
+                <span class="separator" aria-hidden="true">/</span>
+                <a class="text-link" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+              </dd>
+            </div>
+            <div class="detail">
+              <dt>当前状态</dt>
+              <dd class="status"><span class="status-dot" aria-hidden="true"></span>可承接新项目</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section section--about" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">01 / 关于我</p>
-          <h2 id="about-title">认真做界面，<br>也认真理解人。</h2>
-        </div>
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container section-grid">
+        <header class="section-heading">
+          <p class="section-index">02</p>
+          <h2 id="education-title">教育背景</h2>
+        </header>
 
-        <div class="about-grid">
-          <div class="about-copy">
-            <p class="about-lead">
-              我相信好的数字产品应该让人感到轻松，而不是多学一套规则。
+        <div class="section-content">
+          <article class="entry">
+            <p class="entry-date">
+              <time datetime="2016-09">2016.09</time>
+              <span aria-hidden="true">—</span>
+              <time datetime="2020-06">2020.06</time>
             </p>
-            <p>
-              过去六年，我在创业团队和成熟产品之间来回穿梭：写过从零到一的设计系统，
-              也做过需要兼容十年历史代码的重构。我的工作通常从理解用户和业务开始，
-              在原型、代码与真实反馈之间反复打磨。
-            </p>
-            <p>
-              工作之外，我喜欢逛菜市场、拍街角的字、研究排版，以及把复杂的网页做得更快一点。
-              如果你也在意细节，我们大概会聊得来。
-            </p>
-          </div>
-
-          <aside class="facts" aria-label="快速信息">
-            <dl class="fact-list">
-              <div class="fact">
-                <dt>所在地</dt>
-                <dd>上海，中国</dd>
-              </div>
-              <div class="fact">
-                <dt>当前角色</dt>
-                <dd>高级前端工程师</dd>
-              </div>
-              <div class="fact">
-                <dt>关注方向</dt>
-                <dd>设计系统 · 无障碍 · 性能</dd>
-              </div>
-              <div class="fact">
-                <dt>工作语言</dt>
-                <dd>中文 · English</dd>
-              </div>
-            </dl>
-            <p class="facts__note">
-              <span class="status-dot" aria-hidden="true"></span>
-              乐于参与有长期价值的产品
-            </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--skills" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow">02 / 能力</p>
-            <h2 id="skills-title">从想法到上线，<br>把每个环节做扎实。</h2>
-          </div>
-          <p class="section-intro">
-            不追求堆满工具列表，更在意能否稳定交付、持续维护，
-            并让使用者真正受益。
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <span class="skill-card__index" aria-hidden="true">01</span>
-            <span class="icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 4l-4 16"></path>
-              </svg>
-            </span>
-            <h3>前端工程</h3>
-            <p>搭建稳定、可维护的界面层，对语义化、性能与细节体验有耐心。</p>
-            <ul class="tag-list" aria-label="前端工程技能">
-              <li>语义化 HTML</li>
-              <li>现代 CSS</li>
-              <li>原生 JavaScript</li>
-              <li>TypeScript</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-card__index" aria-hidden="true">02</span>
-            <span class="icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
-                <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
-                <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
-                <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
-              </svg>
-            </span>
-            <h3>设计系统</h3>
-            <p>把零散样式沉淀为可复用的规则，让设计与开发在同一套语言里协作。</p>
-            <ul class="tag-list" aria-label="设计系统技能">
-              <li>Design Tokens</li>
-              <li>组件规范</li>
-              <li>Storybook</li>
-              <li>Figma</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <span class="skill-card__index" aria-hidden="true">03</span>
-            <span class="icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <circle cx="12" cy="10" r="2.6"></circle>
-                <path d="M6.5 19c.8-2.4 2.9-4 5.5-4s4.7 1.6 5.5 4"></path>
-              </svg>
-            </span>
-            <h3>体验与无障碍</h3>
-            <p>用键盘、读屏和真实网络环境检验产品，让好体验不只属于少数人。</p>
-            <ul class="tag-list" aria-label="体验与无障碍技能">
-              <li>WCAG 2.2</li>
-              <li>键盘测试</li>
-              <li>用户访谈</li>
-              <li>可用性评估</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--projects" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow">03 / 项目经历</p>
-            <h2 id="projects-title">一些认真做过的<br>产品与体验。</h2>
-          </div>
-          <p class="section-intro">
-            以下内容为示例项目，展示工作方式与关注点。
-            你可以替换成自己的真实经历。
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-card--feature">
-            <div class="project-visual project-visual--trace" aria-hidden="true">
-              <span class="trace__stamp">TRACE / 01</span>
-              <svg class="trace__route" viewBox="0 0 600 400" preserveAspectRatio="none" fill="none">
-                <path d="M-20 300C90 290 100 150 210 175S360 330 455 220 560 80 640 110"></path>
-              </svg>
-              <span class="trace-node trace-node--a"><i></i>临安 · 产地</span>
-              <span class="trace-node trace-node--b"><i></i>杭州 · 分拣</span>
-              <span class="trace-node trace-node--c"><i></i>上海 · 门店</span>
-              <span class="trace__label">从产地到餐桌，<br>每一步都有迹可循。</span>
-            </div>
-
-            <div class="project-copy">
-              <p class="project-kicker">产品体验 · 前端开发 / 2025</p>
-              <h3>青禾 · 农产品溯源平台</h3>
-              <p class="project-summary">
-                为连锁生鲜品牌搭建的溯源查询平台。把分散在供应链里的信息，
-                整理成消费者和门店员工都能快速理解的界面。
+            <div class="entry-main">
+              <h3>同济大学</h3>
+              <p class="entry-role">数字媒体艺术 · 学士</p>
+              <p class="entry-note">
+                主修课程：交互设计、信息可视化、网页技术、认知心理学。
               </p>
-              <ul class="tag-list" aria-label="青禾项目使用技术">
-                <li>TypeScript</li>
-                <li>数据可视化</li>
-                <li>设计系统</li>
-              </ul>
-
-              <details class="project-details">
-                <summary>
-                  查看项目详情
-                  <span class="details-icon" aria-hidden="true"></span>
-                </summary>
-                <div class="details-body">
-                  <dl>
-                    <div>
-                      <dt>我的角色</dt>
-                      <dd>前端负责人，负责信息架构、核心页面开发与设计系统落地。</dd>
-                    </div>
-                    <div>
-                      <dt>关键成果</dt>
-                      <dd>覆盖 12 个产地与 40+ 门店，核心查询页首屏加载由 4.2s 降至 1.6s。</dd>
-                    </div>
-                    <div>
-                      <dt>用到的能力</dt>
-                      <dd>复杂信息梳理、性能优化、跨团队协作。</dd>
-                    </div>
-                  </dl>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-visual project-visual--tide" aria-hidden="true">
-              <div class="tide-rings">
-                <span class="tide-time">25:00</span>
-                <span class="tide-caption">FOCUS / REST</span>
-              </div>
-              <span class="tide-note">把注意力，<br>还给当下。</span>
-            </div>
-
-            <div class="project-copy">
-              <p class="project-kicker">个人项目 / 2024</p>
-              <h3>潮汐 · 专注计时器</h3>
-              <p class="project-summary">
-                一个没有社交、没有排行榜的专注工具。用克制的视觉与声音提示，
-                帮助用户进入并结束一段深度工作。
+              <p class="entry-note">
+                毕业设计关注面向视障用户的阅读体验，获校级优秀毕业设计。
               </p>
-              <ul class="tag-list" aria-label="潮汐项目使用技术">
-                <li>原生 JavaScript</li>
-                <li>Web Audio</li>
-                <li>PWA</li>
-              </ul>
-
-              <details class="project-details">
-                <summary>
-                  查看项目详情
-                  <span class="details-icon" aria-hidden="true"></span>
-                </summary>
-                <div class="details-body">
-                  <dl>
-                    <div>
-                      <dt>我的角色</dt>
-                      <dd>独立完成产品定义、视觉设计、开发与测试。</dd>
-                    </div>
-                    <div>
-                      <dt>关键成果</dt>
-                      <dd>离线可用，Lighthouse 性能与无障碍评分均为 100。</dd>
-                    </div>
-                    <div>
-                      <dt>用到的能力</dt>
-                      <dd>产品思维、动效控制、渐进式 Web 应用。</dd>
-                    </div>
-                  </dl>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-visual project-visual--fold" aria-hidden="true">
-              <div class="fold-sheet">
-                <span class="fold-overline">FOLD / NOTE 03</span>
-                <span class="fold-title">留白，<br>也是一种内容。</span>
-                <span class="fold-lines"><i></i><i></i><i></i></span>
-                <span class="fold-byline">WORDS BY YU'AN</span>
-              </div>
-            </div>
-
-            <div class="project-copy">
-              <p class="project-kicker">内容体验 / 2024</p>
-              <h3>折页 · 独立写作空间</h3>
-              <p class="project-summary">
-                为长文阅读设计的轻量写作与发布工具。重点不是功能多，
-                而是让排版、阅读节奏与键盘操作都足够安静顺滑。
-              </p>
-              <ul class="tag-list" aria-label="折页项目使用技术">
-                <li>CSS Grid</li>
-                <li>网页排版</li>
-                <li>无障碍</li>
-              </ul>
-
-              <details class="project-details">
-                <summary>
-                  查看项目详情
-                  <span class="details-icon" aria-hidden="true"></span>
-                </summary>
-                <div class="details-body">
-                  <dl>
-                    <div>
-                      <dt>我的角色</dt>
-                      <dd>设计与开发，负责版式系统、响应式阅读体验和键盘导航。</dd>
-                    </div>
-                    <div>
-                      <dt>关键成果</dt>
-                      <dd>支持 320px 至 2560px 宽度，全流程可通过键盘完成。</dd>
-                    </div>
-                    <div>
-                      <dt>用到的能力</dt>
-                      <dd>响应式设计、字体排印、可访问性测试。</dd>
-                    </div>
-                  </dl>
-                </div>
-              </details>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="contact-copy">
-            <p class="eyebrow">04 / 联系</p>
-            <h2 id="contact-title">有想法？<br>一起把它做出来。</h2>
-            <p>
-              无论是产品从零到一、设计系统搭建，还是现有体验的梳理与重构，
-              都欢迎来信聊聊。请简单说说你的目标与时间安排。
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container section-grid">
+        <header class="section-heading">
+          <p class="section-index">03</p>
+          <h2 id="experience-title">工作经历</h2>
+        </header>
+
+        <div class="section-content">
+          <article class="entry">
+            <p class="entry-date">
+              <time datetime="2023-04">2023.04</time>
+              <span aria-hidden="true">—</span>
+              <span>至今</span>
             </p>
-            <p class="contact-availability">
-              <span class="status-dot" aria-hidden="true"></span>
-              通常会在 1–2 个工作日内回复
+            <div class="entry-main">
+              <h3>澄明科技</h3>
+              <p class="entry-role">高级前端工程师</p>
+              <ul class="achievement-list">
+                <li>负责企业数据产品的前端架构与设计系统，覆盖 6 个业务模块。</li>
+                <li>推动性能与无障碍专项，核心页面首屏加载时间由 4.2s 降至 1.6s。</li>
+                <li>维护组件规范与交付流程，和产品、设计共同推进体验一致性。</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry">
+            <p class="entry-date">
+              <time datetime="2020-07">2020.07</time>
+              <span aria-hidden="true">—</span>
+              <time datetime="2023-03">2023.03</time>
             </p>
-          </div>
-
-          <div class="contact-actions">
-            <p class="contact-label">写封信给我</p>
-            <div class="email-row">
-              <a class="email-link" href="mailto:hello@yian.dev">hello@yian.dev</a>
-              <button class="copy-button" type="button" data-copy-email="hello@yian.dev" aria-label="复制邮箱地址 hello@yian.dev">
-                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="7" y="7" width="9" height="9" rx="2"></rect>
-                  <path d="M13 7V5.5A2.5 2.5 0 0 0 10.5 3h-5A2.5 2.5 0 0 0 3 5.5v5A2.5 2.5 0 0 0 5.5 13H7"></path>
-                </svg>
-                <span data-copy-label>复制</span>
-              </button>
+            <div class="entry-main">
+              <h3>见山工作室</h3>
+              <p class="entry-role">前端工程师</p>
+              <ul class="achievement-list">
+                <li>从 0 到 1 参与三款产品的前端开发，负责响应式布局与交互实现。</li>
+                <li>搭建组件库与基础检查流程，支持团队从 4 人扩展至 12 人。</li>
+                <li>与设计师协作完成多个品牌站点，兼顾可访问性与加载性能。</li>
+              </ul>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="contact-links" aria-label="社交媒体">
-              <a href="https://github.com/" rel="noopener">
-                GitHub
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 12 12 4M6 4h6v6"></path>
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/" rel="noopener">
-                LinkedIn
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 12 12 4M6 4h6v6"></path>
-                </svg>
-              </a>
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container section-grid">
+        <header class="section-heading">
+          <p class="section-index">04</p>
+          <h2 id="skills-title">专业技能</h2>
+        </header>
+
+        <div class="section-content">
+          <div class="skill-list">
+            <div class="skill-row">
+              <h3>前端开发</h3>
+              <p>语义化 HTML、现代 CSS、原生 JavaScript、TypeScript</p>
             </div>
-
-            <p class="copy-status" data-copy-status role="status" aria-live="polite"></p>
+            <div class="skill-row">
+              <h3>设计系统</h3>
+              <p>Design Tokens、组件规范、Storybook、Figma</p>
+            </div>
+            <div class="skill-row">
+              <h3>无障碍与体验</h3>
+              <p>WCAG 2.2、键盘测试、读屏测试、可用性评估</p>
+            </div>
+            <div class="skill-row">
+              <h3>工程协作</h3>
+              <p>Git、代码审查、性能分析、技术文档写作</p>
+            </div>
           </div>
+          <p class="skill-note">
+            能独立完成从设计还原、交互实现到上线检查的完整链路，也乐于把经验整理成团队可复用的规范。
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer__inner">
-      <p>© <span data-year>2026</span> 林予安 · 用原生 HTML、CSS 和 JavaScript 手写。</p>
-      <a class="back-to-top" href="#top">
-        回到顶部
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"></path>
-        </svg>
-      </a>
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> 林予安</p>
+      <p>用 HTML、CSS 和 JavaScript 手写</p>
+      <a class="text-link" href="#profile">回到顶部 ↑</a>
     </div>
   </footer>
 </body>

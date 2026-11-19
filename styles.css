@@ -157,10 +157,10 @@ p {
 }
 
 .entry-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px;
   gap: 18px;
+  align-items: baseline;
 }
 
 .entry-head strong {
@@ -174,10 +174,11 @@ p {
 }
 
 .entry-date {
-  flex: none;
   color: var(--muted);
   font-size: 12px;
   font-variant-numeric: tabular-nums;
+  text-align: left;
+  white-space: nowrap;
 }
 
 ul {
@@ -320,7 +321,7 @@ li strong {
   }
 
   .entry-head {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 2px;
   }
 
@@ -388,6 +389,11 @@ li strong {
   .entry-date,
   .entry-role {
     font-size: 8.8pt;
+  }
+
+  .entry-head {
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 12px;
   }
 
   section {

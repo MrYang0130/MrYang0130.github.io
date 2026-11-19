@@ -1,0 +1,460 @@
+:root {
+  --ink: #1f2933;
+  --muted: #5b6770;
+  --line: #dbe2ea;
+  --accent: #1f4e79;
+  --paper: #ffffff;
+  --canvas: #f3f5f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 28px 16px 56px;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-size: 13.5px;
+  line-height: 1.62;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 38px 42px 34px;
+  background: var(--paper);
+  border: 1px solid #e5e9ee;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(20, 35, 50, 0.05);
+}
+
+/* --- header ---------------------------------------------------------- */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.identity {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+.role {
+  margin: 5px 0 0;
+  color: var(--accent);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2px 0;
+  max-width: 360px;
+  padding-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.contact span + span::before {
+  content: "·";
+  margin: 0 7px;
+  color: #a4afb9;
+}
+
+.meta {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* --- sections -------------------------------------------------------- */
+
+section {
+  margin-top: 19px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 13.5px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  margin: 0 0 2px;
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+p {
+  margin: 0;
+}
+
+.summary {
+  color: #2f3b45;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 10px;
+  align-items: baseline;
+}
+
+.skill-group h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12.5px;
+}
+
+.skill-group p {
+  color: #3c4852;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+/* --- entries --------------------------------------------------------- */
+
+.entry {
+  margin-top: 12px;
+}
+
+.entry:first-of-type {
+  margin-top: 0;
+}
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.entry-head strong {
+  font-weight: 650;
+}
+
+.entry-role {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.entry-date {
+  flex: none;
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+ul {
+  margin: 5px 0 0;
+  padding-left: 17px;
+}
+
+li {
+  margin: 3px 0;
+  color: #2f3b45;
+}
+
+li::marker {
+  color: #8fa3b5;
+}
+
+li strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.education {
+  margin-top: 0;
+}
+
+/* --- project details ------------------------------------------------ */
+
+.project-detail {
+  margin-top: 6px;
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.project-label {
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.project-row p,
+.project-row ul {
+  margin: 0;
+}
+
+.project-row ul {
+  padding-left: 16px;
+}
+
+.project-row li {
+  margin: 2px 0;
+}
+
+/* --- export button --------------------------------------------------- */
+
+.export-button {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 10;
+  padding: 8px 14px;
+  border: 1px solid #c6d2de;
+  border-radius: 5px;
+  background: #ffffff;
+  color: var(--accent);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(20, 35, 50, 0.08);
+}
+
+.export-button:hover,
+.export-button:focus-visible {
+  background: #f2f7fb;
+  border-color: #9fb6c9;
+}
+
+.export-button:focus-visible {
+  outline: 2px solid #9fb6c9;
+  outline-offset: 2px;
+}
+
+.print-hint {
+  margin-top: 22px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  color: #7b8790;
+  font-size: 11.5px;
+}
+
+/* --- responsive ------------------------------------------------------ */
+
+@media (max-width: 700px) {
+  body {
+    padding: 62px 10px 32px;
+  }
+
+  .page {
+    padding: 28px 22px 26px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact {
+    justify-content: flex-start;
+    max-width: none;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .skill-group {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .skill-group h3 {
+    margin-top: 2px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .project-row + .project-row {
+    margin-top: 7px;
+  }
+
+  .project-label {
+    margin-top: 2px;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .entry-date {
+    order: 2;
+  }
+
+  .export-button {
+    top: 12px;
+    right: 12px;
+    padding: 7px 12px;
+  }
+}
+
+/* --- print ----------------------------------------------------------- */
+
+@page {
+  size: A4;
+  margin: 12mm 14mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  body {
+    padding: 0;
+    color: #111820;
+    font-size: 9.9pt;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .export-button,
+  .screen-only {
+    display: none !important;
+  }
+
+  .header {
+    padding-bottom: 9px;
+  }
+
+  .name {
+    font-size: 22pt;
+  }
+
+  .role {
+    font-size: 10.5pt;
+  }
+
+  .contact,
+  .meta,
+  .entry-date,
+  .entry-role {
+    font-size: 8.8pt;
+  }
+
+  section {
+    margin-top: 11px;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+    font-size: 10.5pt;
+  }
+
+  h3 {
+    font-size: 9.5pt;
+  }
+
+  .skill-group {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 7px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .skill-group h3 {
+    font-size: 9.5pt;
+  }
+
+  .skill-group p,
+  .summary,
+  li {
+    font-size: 9.6pt;
+  }
+
+  .entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Projects can span pages; keep each background/goal/responsibility row intact. */
+  .entry.project {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .project-row {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 7px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-label {
+    font-size: 9.5pt;
+  }
+
+  .project-row p,
+  .project-row li {
+    font-size: 9.6pt;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

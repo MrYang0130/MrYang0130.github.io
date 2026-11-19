@@ -1,201 +1,166 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="林予安的个人主页：个人信息、教育背景、工作经历与专业技能。">
-  <meta name="theme-color" content="#fbfaf7">
-  <title>林予安 · 个人主页</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agent 开发工程师简历 · LLM 应用落地">
+  <meta name="theme-color" content="#ffffff">
+  <title>[杨奇] · 个人简历</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
+<body data-pdf-name="杨奇-个人简历">
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#profile" aria-label="林予安，返回个人信息">
-        <span class="brand-name">林予安</span>
-        <span class="brand-note">个人主页</span>
-      </a>
+  <button class="export-button" id="exportPdf" type="button" title="打印并另存为 PDF">
+    导出 PDF
+  </button>
 
-      <nav class="site-nav" aria-label="主导航">
-        <ul class="nav-list">
-          <li><a href="#profile" data-nav aria-current="location">个人信息</a></li>
-          <li><a href="#education" data-nav>教育背景</a></li>
-          <li><a href="#experience" data-nav>工作经历</a></li>
-          <li><a href="#skills" data-nav>专业技能</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <main class="page">
+    <header class="header">
+      <div class="identity">
+        <h1 class="name">杨奇</h1>
+        <p class="role">Agent 开发工程师</p>
+      </div>
+      <div class="contact" aria-label="联系方式">
+        <span>13032990130</span>
+        <span>1160846013@qq.com</span>
+      </div>
+    </header>
 
-  <main id="main">
-    <section class="section section--profile" id="profile" aria-label="个人信息">
-      <div class="container section-grid">
-        <header class="section-heading">
-          <p class="section-index">01</p>
-          <h2>个人信息</h2>
-        </header>
+    <section>
+      <h2>教育经历</h2>
+      <div class="entry-head education">
+        <div>
+          <strong>西安电子科技大学</strong>
+          <span class="entry-role">软件工程 · 本科</span>
+        </div>
+        <span class="entry-date">2018.09 – 2022.06</span>
+      </div>
+    </section>
 
-        <div class="section-content">
-          <div class="profile-intro">
-            <p class="profile-kicker">前端工程师 · 体验设计</p>
-            <h1>林予安</h1>
-            <p class="profile-summary">
-              我是一名前端工程师，关注设计系统、无障碍与性能。
-              习惯从真实使用场景出发，把复杂的信息整理成清晰、稳定、易维护的界面。
+    <section>
+      <h2>工作经历</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <strong>陕西省煤炭运销（集团）有限责任公司</strong>
+            <span class="entry-role">数字化开发工程师</span>
+          </div>
+          <span class="entry-date">2024.03 – 至今</span>
+        </div>
+        <!-- 待补充工作职责 -->
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div>
+            <strong>西安华为技术有限公司</strong>
+            <span class="entry-role">全栈开发工程师</span>
+          </div>
+          <span class="entry-date">2022.07 – 2023.09</span>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2>项目经历</h2>
+
+      <article class="entry project">
+        <div class="entry-head">
+          <div>
+            <strong>文档合规审核 Agent</strong>
+            <span class="entry-role">Agent 开发</span>
+          </div>
+          <span class="entry-date">2024.07 – 至今</span>
+        </div>
+        <div class="project-detail">
+          <div class="project-row">
+            <span class="project-label">项目背景</span>
+            <p>
+              企业合同、制度等文件分散在业务系统中，合规审查依赖人工逐条比对内部合规制度，存在效率低、
+              口径不一致、结论难追溯的问题；业务方上传文件后，需要自动完成审核并通知结果。
             </p>
           </div>
-
-          <dl class="profile-details">
-            <div class="detail">
-              <dt>所在城市</dt>
-              <dd>上海，中国</dd>
-            </div>
-            <div class="detail">
-              <dt>当前职位</dt>
-              <dd>高级前端工程师</dd>
-            </div>
-            <div class="detail">
-              <dt>工作年限</dt>
-              <dd>6 年</dd>
-            </div>
-            <div class="detail">
-              <dt>电子邮箱</dt>
-              <dd><a class="text-link" href="mailto:hello@yian.dev">hello@yian.dev</a></dd>
-            </div>
-            <div class="detail">
-              <dt>个人主页</dt>
-              <dd>
-                <a class="text-link" href="https://github.com/" rel="noopener">GitHub</a>
-                <span class="separator" aria-hidden="true">/</span>
-                <a class="text-link" href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
-              </dd>
-            </div>
-            <div class="detail">
-              <dt>当前状态</dt>
-              <dd class="status"><span class="status-dot" aria-hidden="true"></span>可承接新项目</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="education" aria-labelledby="education-title">
-      <div class="container section-grid">
-        <header class="section-heading">
-          <p class="section-index">02</p>
-          <h2 id="education-title">教育背景</h2>
-        </header>
-
-        <div class="section-content">
-          <article class="entry">
-            <p class="entry-date">
-              <time datetime="2016-09">2016.09</time>
-              <span aria-hidden="true">—</span>
-              <time datetime="2020-06">2020.06</time>
+          <div class="project-row">
+            <span class="project-label">项目目标</span>
+            <p>
+              构建可审计、可解释、可降级的文档合规审核 Agent，覆盖 PDF / Word / Excel / PPT 及扫描件。
+              从企业合规文档生成可版本化的规则清单，审核结论可追溯到文件原文与合规条款原文。
+              后台异步完成审核，通过签名 Webhook 回调业务系统；高风险或模型不可用时转人工，避免错误放行。
             </p>
-            <div class="entry-main">
-              <h3>同济大学</h3>
-              <p class="entry-role">数字媒体艺术 · 学士</p>
-              <p class="entry-note">
-                主修课程：交互设计、信息可视化、网页技术、认知心理学。
-              </p>
-              <p class="entry-note">
-                毕业设计关注面向视障用户的阅读体验，获校级优秀毕业设计。
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="container section-grid">
-        <header class="section-heading">
-          <p class="section-index">03</p>
-          <h2 id="experience-title">工作经历</h2>
-        </header>
-
-        <div class="section-content">
-          <article class="entry">
-            <p class="entry-date">
-              <time datetime="2023-04">2023.04</time>
-              <span aria-hidden="true">—</span>
-              <span>至今</span>
-            </p>
-            <div class="entry-main">
-              <h3>澄明科技</h3>
-              <p class="entry-role">高级前端工程师</p>
-              <ul class="achievement-list">
-                <li>负责企业数据产品的前端架构与设计系统，覆盖 6 个业务模块。</li>
-                <li>推动性能与无障碍专项，核心页面首屏加载时间由 4.2s 降至 1.6s。</li>
-                <li>维护组件规范与交付流程，和产品、设计共同推进体验一致性。</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="entry">
-            <p class="entry-date">
-              <time datetime="2020-07">2020.07</time>
-              <span aria-hidden="true">—</span>
-              <time datetime="2023-03">2023.03</time>
-            </p>
-            <div class="entry-main">
-              <h3>见山工作室</h3>
-              <p class="entry-role">前端工程师</p>
-              <ul class="achievement-list">
-                <li>从 0 到 1 参与三款产品的前端开发，负责响应式布局与交互实现。</li>
-                <li>搭建组件库与基础检查流程，支持团队从 4 人扩展至 12 人。</li>
-                <li>与设计师协作完成多个品牌站点，兼顾可访问性与加载性能。</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="container section-grid">
-        <header class="section-heading">
-          <p class="section-index">04</p>
-          <h2 id="skills-title">专业技能</h2>
-        </header>
-
-        <div class="section-content">
-          <div class="skill-list">
-            <div class="skill-row">
-              <h3>前端开发</h3>
-              <p>语义化 HTML、现代 CSS、原生 JavaScript、TypeScript</p>
-            </div>
-            <div class="skill-row">
-              <h3>设计系统</h3>
-              <p>Design Tokens、组件规范、Storybook、Figma</p>
-            </div>
-            <div class="skill-row">
-              <h3>无障碍与体验</h3>
-              <p>WCAG 2.2、键盘测试、读屏测试、可用性评估</p>
-            </div>
-            <div class="skill-row">
-              <h3>工程协作</h3>
-              <p>Git、代码审查、性能分析、技术文档写作</p>
-            </div>
           </div>
-          <p class="skill-note">
-            能独立完成从设计还原、交互实现到上线检查的完整链路，也乐于把经验整理成团队可复用的规范。
-          </p>
+          <div class="project-row">
+            <span class="project-label">个人职责</span>
+            <ul>
+              <li>负责整体方案与 0→1 落地：URL + MCP 取件、确定性规则 + RAG + LLM 混合审核、签名 Webhook 回调。</li>
+              <li>设计 7 阶段审核流水线（取件 / 提取 / 规则 / RAG+LLM / 聚合 / 回调），实现阶段级幂等、Outbox + 定时补偿，worker 可水平扩展。</li>
+              <li>建设合规知识库与规则生产链路：分块 → 向量化 → 混合检索 → LLM 抽取检查项 → 来源校验 → 人工激活 → 版本化。</li>
+              <li>设计证据校验与安全边界：引文与原文 block 匹配、页码由 block 推导、未验证高风险转人工；提示注入检测、SSRF 白名单、zip bomb 防护。</li>
+              <li>建立评测与可观测：检索 recall、finding precision / recall、阶段耗时、token / 成本；85 项测试覆盖规则、流水线、幂等与回调。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry project">
+        <div class="entry-head">
+          <div>
+            <strong>数字化信息体验中心-统一搜索引擎</strong>
+            <span class="entry-role">全栈开发</span>
+          </div>
+          <span class="entry-date">2022.07 – 2023.09</span>
+        </div>
+        <div class="project-detail">
+          <div class="project-row">
+            <span class="project-label">项目背景</span>
+            <p>
+              内部多产品线的产品手册、营销资料和方案文档分散在不同系统，缺少统一入口；toB 用户与内部团队
+              需要在不同产品之间检索、对比信息，信息获取效率低。
+            </p>
+          </div>
+          <div class="project-row">
+            <span class="project-label">项目目标</span>
+            <p>
+              建设 toB 端统一搜索引擎，聚合多产品线信息，提供一致的搜索与展示体验。
+              从 0 到 1 搭建搜索数据基座，完成产品手册、营销资料等文件的解析、存储与索引。
+              建立可维护的工程规范，补齐日志、监控、告警与接口文档。
+            </p>
+          </div>
+          <div class="project-row">
+            <span class="project-label">个人职责</span>
+            <ul>
+              <li>担任 toB 端统一搜索引擎前端 owner，规划页面功能与交互，为内部多产品线提供统一的产品信息聚合展示。</li>
+              <li>从 0 到 1 规划搜索引擎数据基座的技术选型、流程与构建开发，完成产品手册、营销资料等文件的解析与存储。</li>
+              <li>推动日志、监控、告警与接口文档规范落地，保障搜索服务的可维护性。</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2>专业技能</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Agent / LLM</h3>
+          <p>Workflow 编排、Tool Use / MCP、结构化 JSON 输出与校验修复、Prompt 前缀缓存、Guardrails、失败降级。</p>
+        </div>
+        <div class="skill-group">
+          <h3>RAG</h3>
+          <p>BGE-M3、pgvector / HNSW、混合检索 + RRF、中文分词 FTS、Chunking、规则清单编译、离线评测。</p>
+        </div>
+        <div class="skill-group">
+          <h3>评测</h3>
+          <p>掌握 LLM-as-Judge、自建评测集与 badcase 归因；有「输入 + 决策 + 后效」基准集沉淀与离线反事实评估经验。</p>
+        </div>
+        <div class="skill-group">
+          <h3>安全</h3>
+          <p>熟悉 prompt 注入防御、内容审核、越权拦截与写操作幂等。</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span data-year>2026</span> 林予安</p>
-      <p>用 HTML、CSS 和 JavaScript 手写</p>
-      <a class="text-link" href="#profile">回到顶部 ↑</a>
-    </div>
-  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
